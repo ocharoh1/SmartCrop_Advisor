@@ -1,177 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".RecommendationPage">
-    <RelativeLayout
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:hint="N"
+        android:inputType="numberDecimal" />
 
-        <ImageView
-            android:id="@+id/close_button"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:contentDescription="Close"
-            android:src="@drawable/baseline_close_24" />
-    </RelativeLayout>
+    <EditText
+        android:id="@+id/etP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="P"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="K"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Temperature (°C)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etHumidity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Humidity (%)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etPh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="pH"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etRainfall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rainfall (mm)"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnPredict"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Recommendation" />
 
     <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enter Soil and Climate Data"
-        android:textSize="24sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
-
-    <LinearLayout
+        android:id="@+id/tvResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="16dp"
-        android:layout_gravity="center_vertical">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/green"
-            app:boxStrokeColor="@color/black"
-            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
-            android:hint="Amount of Nitrogen in Soil">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_crop"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:textColor="@color/black"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/green"
-            app:boxStrokeColor="@color/black"
-            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
-            android:hint="Amount of Phosphorus in Soil">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_soil_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:textColor="@color/black"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/green"
-            app:boxStrokeColor="@color/black"
-            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
-            android:hint="Amount of Potassium in Soil">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_soil_ph"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:textColor="@color/black"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/green"
-            app:boxStrokeColor="@color/black"
-            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
-            android:hint="Amount of Rainfall in Soil">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_soil_moisture"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:textColor="@color/black"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/green"
-            app:boxStrokeColor="@color/black"
-            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
-            android:hint="Temperature">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_soil_temperature"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:textColor="@color/black"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/green"
-            app:boxStrokeColor="@color/black"
-            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
-            android:hint="Humidity">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_soil_nutrients"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:textColor="@color/black"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/btn_recommend"
-            android:layout_width="300dp"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/yellow"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="20dp"
-            android:text="Get Crop Recommendations"/>
-    </LinearLayout>
+        android:textSize="18sp" />
 </LinearLayout>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.WindowCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,33 +51,13 @@ public class Homepage extends AppCompatActivity {
                 });
 
         // Button click listener
-        btnInputData.setOnClickListener(v -> {
-            // Inflate the dialog with custom view
-            LayoutInflater inflater = getLayoutInflater();
-            View dialogView = inflater.inflate(R.layout.activity_recommendationpage, null);
-
-            // Build the dialog
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setView(dialogView);
-
-            // Set up the dialog
-            AlertDialog dialog = builder.create();
-
-            // Set up the close button
-            ImageView closeButton = dialogView.findViewById(R.id.close_button);
-            closeButton.setOnClickListener(view -> {
-                dialog.dismiss();
-            });
-
-            // Set up the recommend button
-            Button recommendButton = dialogView.findViewById(R.id.btn_recommend);
-            recommendButton.setOnClickListener(view -> {
-                // Handle the recommend button click
-                // For example, you can fetch data from the input fields and process it
-                dialog.dismiss();
-            });
-
-            dialog.show();
-        });
+     btnInputData.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View view) {
+             Intent intent= new Intent(getApplicationContext(), EcropModel.class);
+             startActivity(intent);
+             
+         }
+     });
     }
 }

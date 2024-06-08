@@ -9,4 +9,12 @@
     <color name="light_colorSecondary">#FF4081</color>
     <color name="light_colorTertiary">#FFC107</color>
     <color name="light_blue">#03A9F4</color>
+    <!-- Primary Color -->
+    <color name="colorPrimary">#4CAF50</color> <!-- Green -->
+    <color name="colorPrimaryDark">#388E3C</color> <!-- Dark Green -->
+    <color name="colorAccent">#FFC107</color> <!-- Amber -->
+
+
+    <!-- Card Background -->
+    <color name="cardBackground">#F5F5F5</color> <!-- Light Gray -->
 </resources>
