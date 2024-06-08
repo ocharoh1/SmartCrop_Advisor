@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "502258297669",
+    "project_id": "smartcropadvisor",
+    "storage_bucket": "smartcropadvisor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502258297669:android:0b87495648b58ad7f3ac2c",
+        "android_client_info": {
+          "package_name": "com.example.ecrop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwEMu8ifqAY2la0ACAABpUC9P3SCsLk9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

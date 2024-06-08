@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".Homepage">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ECROP"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="1dp"/>
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo"
+        android:contentDescription="logo_image"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_to_ecrop"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/logo_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:elevation="1dp"/>
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ECROP assists you in finding the best crops to grow based on your soil and climate conditions. Click below to enter your data and get personalized recommendations."
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/tv_welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:elevation="1dp"/>
+
+    <Button
+        android:id="@+id/btn_inpt_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Soil and Climate Data"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/tv_info"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:elevation="1dp"/>
+</RelativeLayout>
