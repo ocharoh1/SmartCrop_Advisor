@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".RecommendationPage"
+    android:background="@android:color/white">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crop Recommendation"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"/>
+
+    <!-- Input Fields with custom styles -->
+    <EditText
+        android:id="@+id/input_n"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="N (Nitrogen 0-100)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#666666"/>
+
+    <EditText
+        android:id="@+id/input_p"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="P (Phosphorous 1-150)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#666666"/>
+
+    <EditText
+        android:id="@+id/input_k"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="K (Potassium 1-210)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#666666"/>
+
+    <EditText
+        android:id="@+id/input_temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Temperature (°C 1-45)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#666666"/>
+
+    <EditText
+        android:id="@+id/input_humidity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Humidity (% 1-100)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#666666"/>
+
+    <EditText
+        android:id="@+id/input_ph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="pH (1-7)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#666666"/>
+
+    <EditText
+        android:id="@+id/input_rainfall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rainfall (in mm 1-250)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#666666"/>
+
+    <!-- Button for prediction -->
+    <Button
+        android:id="@+id/button_get_recommendation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Recommendation"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+    <!-- Output TextView -->
+    <TextView
+        android:id="@+id/output_recommendation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Recommended Crop: "
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:padding="12dp"
+        android:background="@color/colorAccent"/>
+
+</LinearLayout>
